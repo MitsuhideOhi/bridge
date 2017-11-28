@@ -17,7 +17,7 @@ class DemoScreen extends React.Component<Props, State> {
     return (
       <View>
         <RNTAwesomeView style={{height: 200}} />
-        <Text style={{textAlign: 'center'}}>Hello from1 Javascript</Text>
+        <Text style={{textAlign: 'center'}}>Hello from Javascript</Text>
         <Button
           title='Trigger Awesome' onPress={
           () => RNTAwesomeViewModules.showAwesomeMessage('Awesome!')
