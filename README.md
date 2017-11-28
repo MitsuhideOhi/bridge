@@ -18,21 +18,9 @@ https://facebook.github.io/react-native/docs/getting-started.html
 
 ## Run the App on iOS Simulator
 
-### Install packages
-
-```sh
-cd bridge/
-yarn install
-cd ./ios
-pod install
-```
 ### Run the App
 
 ```sh
 cd bridge/
 npm run ios
 ```
-
-## Troubleshooting
-### If login action seems not responding
-Please make sure your API mock server is running locally on Node.js
