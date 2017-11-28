@@ -1,0 +1,64 @@
+{
+  "name": "bridge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "run-p android:*",
+    "android:run": "react-native run-android",
+    "ios": "run-p ios:*",
+    "ios:run": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "lint": "node_modules/.bin/standard --verbose './src/*/*.js' | snazzy",
+    "flow": "node_modules/.bin/flow",
+    "check": "run-p test flow lint",
+    "prepush": "npm run check"
+  },
+  "dependencies": {
+    "react": "16.0.0-beta.5",
+    "react-native": "^0.49.5",
+    "react-native-navigation": "^1.1.261",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "reduxsauce": "^0.7.0",
+    "reselect": "^3.0.1",
+    "seamless-immutable": "^7.1.2",
+    "react-native-material-textfield": "^0.10.2",
+    "apsl-react-native-button": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "react-test-renderer": "16.0.0-beta.5",
+    "babel-eslint": "^8.0.2",
+    "standard": "^10.0.3",
+    "snazzy": "^7.0.0",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.2",
+    "flow-bin":"^0.58.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "reactotron-apisauce": "^1.12.2",
+    "reactotron-react-native": "^1.12.3",
+    "reactotron-redux": "^1.12.2",
+    "reactotron-redux-saga": "^1.12.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "standard": {
+    "plugins": [
+      "flowtype"
+    ],
+    "parser": "babel-eslint",
+    "globals": [
+      "require",
+      "describe",
+      "expect",
+      "it",
+      "fetch",
+      "navigator",
+      "Generator",
+      "__DEV__"
+    ]
+  }
+}
